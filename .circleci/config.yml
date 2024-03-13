@@ -9,17 +9,17 @@ version: 2.1
 jobs:
   build:
    docker:
-    - image:python
+    - image: python
    steps:
     - checkout
-    - run:python Main1.py
+    - run: python Main1.py
   test:
     docker:
-     - image:python
+     - image: python
 
     steps:
      - checkout
-     - run:python Test.py
+     - run: python Test.py
      #orchestrate our job run sequence
 workflows:
  build_ands_test:
